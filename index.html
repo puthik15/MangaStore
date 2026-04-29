@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MangaBookStore</title>
+    <link rel="stylesheet" href="asset/css/bootstrap.css" />
+    <link rel="stylesheet" href="asset/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="asset/css/custom.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="asset/images/logos/logo.png" width="150px" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">ទំព័រដើម</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <a href="cart.html" class="btn btn-warning">
+                🛒Cart (<span id="cart-count">0</span>)
+              </a>
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                ស្វែងរក
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">សូមស្វាគមន៏មកកាន់គេហទំព័រយើងខ្ញុំ</h5>
+        <p class="card-text">
+          ហាងយើងខ្ញុំមានលក់សៀវភៅជាច្រើនប្រភេទដែលកំពុងពេញនិយមនាពេលបច្ចុប្បន្នសម្រាប់បំពេញតម្រូវការរបស់លោកអ្នក​
+        </p>
+        <a href="index.html" class="btn btn-primary">ទិញឥឡូវនេះ</a>
+      </div>
+    </div>
+
+    <div class="card bg-dark text-white">
+      <img
+        src="asset/images/Banners/banner.jpg"
+        class="card-img"
+        height="400px"
+      />
+      <div
+        class="card-img-overlay d-flex flex-column justify-content-center align-items-center"
+      ></div>
+    </div>
+
+    <div class="container">
+      <h3 class="mt-5 text-center">ប្រភេទសៀវភៅ</h3>
+
+      <div class="row mt-5 gx-3 justify-content-center">
+        <div class="col-6 col-md-2">
+          <a href="cart.html" class="category-link">
+            <div class="category-card">
+              <img
+                src="asset/images/category/Boruto.jpg"
+                class="category_img"
+              />
+              <p>Boruto</p>
+              <p>$0.5</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-name="Boruto"
+                data-price="0.5"
+                data-image="asset/images/category/Boruto.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <a href="cart.html" class="category-link">
+            <div class="category-card">
+              <img
+                src="asset/images/category/Dandadan.jpg"
+                class="category_img"
+              />
+              <p>Dandadan</p>
+              <p>$0.5</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-name="Dandadan"
+                data-price="0.5"
+                data-image="asset/images/category/Dandadan.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <a href="cart.html" class="category-link">
+            <div class="category-card">
+              <img
+                src="asset/images/category/JujutsuKaisen.jpg"
+                class="category_img"
+              />
+              <p>JujutsuKaisen</p>
+              <p>$0.5</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-name="JujutsuKaisen"
+                data-price="0.5"
+                data-image="asset/images/category/JujutsuKaisen.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <a href="cart.html" class="category-link">
+            <div class="category-card">
+              <img
+                src="asset/images/category/kagurabachi.jpg"
+                class="category_img"
+              />
+              <p>kagurabachi</p>
+              <p>$0.5</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-name="kagurabachi"
+                data-price="0.5"
+                data-image="asset/images/category/kagurabachi.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <a href="cart.html" class="category-link">
+            <div class="category-card">
+              <img
+                src="asset/images/category/KAIJUNO8.jpg"
+                class="category_img"
+              />
+              <p>Kaiju No8</p>
+              <p>$0.5</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-name="Kaiju No8"
+                data-price="0.5"
+                data-image="asset/images/category/KAIJUNO8.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <a href="cart.html" class="category-link">
+            <div class="category-card">
+              <img
+                src="asset/images/category/sakamoto.jpg"
+                class="category_img"
+              />
+              <p>Sakamoto Day</p>
+              <p>$0.5</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-name="Sakamoto Day"
+                data-price="0.5"
+                data-image="asset/images/category/sakamoto.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <a href="cart.html" class="category-link">
+            <div class="category-card">
+              <img
+                src="asset/images/category/spyXfamily.jpg"
+                class="category_img"
+              />
+              <p>Spy X Family</p>
+              <p>$0.5</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-name="Spy X Family"
+                data-price="0.5"
+                data-image="asset/images/category/spyXfamily.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <a href="cart.html" class="category-link">
+            <div class="category-card">
+              <img src="asset/images/category/6.jpg" class="category_img" />
+              <p>Coming Soon!</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-name="Unavailable"
+                data-price="0.5"
+                data-image="asset/images/category/6.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <a href="cart.html" class="category-link">
+            <div class="category-card">
+              <img src="asset/images/category/6.jpg" class="category_img" />
+              <p>Coming Soon!</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-name="Unavailable"
+                data-price="0.5"
+                data-image="asset/images/category/Boruto.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <a href="cart.html" class="category-link">
+            <div class="category-card">
+              <img src="asset/images/category/6.jpg" class="category_img" />
+              <p>Coming Soon!</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-name="Unavailable"
+                data-price="0.5"
+                data-image="asset/images/category/Boruto.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <a href="cart.html" class="category-link">
+            <div class="category-card">
+              <img src="asset/images/category/6.jpg" class="category_img" />
+              <p>Coming Soon!</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-name="Unavailable"
+                data-price="0.5"
+                data-image="asset/images/category/Boruto.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <a href="cart.html" class="category-link">
+            <div class="category-card">
+              <img src="asset/images/category/6.jpg" class="category_img" />
+              <p>Coming Soon!</p>
+              <button
+                class="btn btn-primary add-to-cart"
+                data-name="Unavailable"
+                data-price="0.5"
+                data-image="asset/images/category/Boruto.jpg"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartCountElement = document.getElementById("cart-count");
+      updateCartCount();
+      const addButtons = document.querySelectorAll(".add-to-cart");
+
+      addButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const name = button.getAttribute("data-name");
+          const price = button.getAttribute("data-price");
+          const image = button.getAttribute("data-image");
+
+          const product = { name, price, image };
+
+          cart.push(product);
+          localStorage.setItem("cart", JSON.stringify(cart));
+
+          alert(name + " added to cart!");
+          updateCartCount();
+        });
+      });
+
+      function updateCartCount() {
+        cartCountElement.innerText = cart.length;
+      }
+    </script>
+
+    <script src="asset/js/bootstrap.js"></script>
+    <script src="asset/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

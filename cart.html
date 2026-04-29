@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="asset/css/bootstrap.css" />
+
+    <style>
+      body {
+        background-color: #f5f5f5;
+      }
+
+      .cart-container {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .cart-card {
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        background: white;
+        transition: 0.3s;
+      }
+
+      .cart-card:hover {
+        transform: scale(1.02);
+      }
+
+      .cart-img {
+        width: 80px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .total-box {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .empty-cart {
+        text-align: center;
+        padding: 50px;
+        color: gray;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container cart-container mt-5">
+      <h2 class="text-center mb-4">🛒 Your Cart</h2>
+
+      <div id="cart-items"></div>
+
+      <div
+        class="total-box mt-4 d-flex justify-content-between align-items-center"
+      >
+        <h4>Total: $<span id="total-price">0</span></h4>
+
+        <div>
+          <button class="btn btn-outline-danger me-2" onclick="clearCart()">
+            Clear
+          </button>
+          <button class="btn btn-success" onclick="checkout()">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const cartItemsContainer = document.getElementById("cart-items");
+      const totalPriceElement = document.getElementById("total-price");
+
+      function displayCart() {
+        cartItemsContainer.innerHTML = "";
+
+        if (cart.length === 0) {
+          cartItemsContainer.innerHTML = `
+      <div class="empty-cart">
+        <h4>Your cart is empty 🛒</h4>
+        <p>Go back and add some manga!</p>
+      </div>
+    `;
+          totalPriceElement.innerText = "0";
+          return;
+        }
+
+        let total = 0;
+
+        cart.forEach((item, index) => {
+          total += parseFloat(item.price);
+
+          cartItemsContainer.innerHTML += `
+      <div class="cart-card mb-3 d-flex justify-content-between align-items-center">
+
+        <div class="d-flex align-items-center">
+          <img src="${item.image}" class="cart-img me-3">
+
+          <div>
+            <h5 class="mb-1">${item.name}</h5>
+            <p class="text-muted mb-0">$${item.price}</p>
+          </div>
+        </div>
+
+        <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">
+          Remove
+        </button>
+
+      </div>
+    `;
+        });
+
+        totalPriceElement.innerText = total.toFixed(2);
+      }
+
+      function removeItem(index) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCart();
+      }
+
+      function clearCart() {
+        cart = [];
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCart();
+      }
+
+      function checkout() {
+        if (cart.length === 0) {
+          alert("Cart is empty!");
+          return;
+        }
+
+        alert("✅ Order placed successfully!");
+        cart = [];
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCart();
+      }
+
+      displayCart();
+    </script>
+  </body>
+</html>
